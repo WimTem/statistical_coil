@@ -81,6 +81,7 @@ println(size(result))
 
 p1 = scatter(A[:,1].^2, label="r^2", yaxis=:log)
 p2 = scatter!(A[:,3], label="6.s^2", yaxis=:log)
+savefig("compare.png")
 p3 = histogram(result, normalize=true)
 savefig("results.png")
 plot(p2, p3, layout=(2,1))
